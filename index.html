@@ -1,0 +1,58 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+       
+       
+       <div class="container">
+            
+            <div class="column">
+                <h3 class="teamTitle">HOME</h3>
+                <div class="scoreContainer">
+                    <h1 id="homeScore">0</h1>
+                </div>
+                
+                <div class="buttonBlock">
+                    <button id="plusOneHome" onclick="p1Home()">+1</button>
+                    <button id="plusTwoHome" onclick="p2Home()">+2</button>
+                    <button id="plusThreeHome" onclick="p3Home()">+3</button>
+                </div>
+                <div class="buttonBlock">
+                    <button class="full" id="minusOneHome" onclick="m1Home()">-1</button>
+                </div>
+
+            </div>
+            
+            <div class="column" class="centerColumn">
+                <div id="time" class="timeBlock">300</div>
+                <div class="buttonBlock" id="centerButtons">
+                    <button id="pause-btn" onclick="pauseGame()">pause</button>
+                    <button id="reset-btn" onclick="resetGame()">reset</button>
+                </div>
+                        <div class="buttonBlock">
+                    <button class="full" id="start-btn()" onclick="startGame()">Start</button>    
+                </div>
+            </div>
+            
+            
+            <div class="column">
+                <h3 class="teamTitle">GUEST</h3>
+                <div class="scoreContainer">
+                    <h1 id="awayScore">0</h1>
+                </div>
+                 <div class="buttonBlock">
+                    <button id="plusOneAway" onclick="p1Away()">+1</button>
+                    <button id="plusTwoAway" onclick="p2Away()">+2</button>
+                    <button id="plusThreeAway" onclick="p3Away()">+3</button>
+                </div>
+                <div class="buttonBlock">
+                    <button class="full" id="minusOneAway" onclick="m1Away()">-1</button>    
+                </div>
+
+            </div>
+             
+        </div>     
+        <script src="index.js"></script>
+    </body>
+</html>
