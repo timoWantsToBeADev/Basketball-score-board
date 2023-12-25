@@ -1,8 +1,8 @@
 let homeScore = 0;
 let awayScore = 0;
-let secondsLeft = 300;
+let secondsLeft = 3;
 let time = document.getElementById("time")
-let state;
+let state = "zero";
 let nInterval;
 
 let homeScoreEl = document.getElementById("homeScore");
@@ -59,12 +59,26 @@ function minSecond() {
     
         secondsLeft -= 1;
         time.textContent = secondsLeft;
+        if (secondsLeft <= 0) {
+            time.classList.add("gameOver");
+            time.textContent = "Game Over";
+            state = "over";
+            console.log(state)
+            clearInterval(nInterval);
+        }
     }
     
 
 function startGame(){
+    console.log(state)
+    if (state = "over" && state != "zero" && state != "paused"){
+            secondsLeft = 300; 
+            time.textContent = secondsLeft;
+    }
+     
      if (state != "running") {
-        state = "running";
+            time.classList.remove("gameOver");
+            state = "running"; 
         if (secondsLeft > 0) {
           nInterval = setInterval(minSecond,1000);
         }
@@ -72,6 +86,7 @@ function startGame(){
 }
 
 function pauseGame(){
+    
     
     state = "paused";
     console.log(state);
@@ -81,6 +96,7 @@ function pauseGame(){
 
 
 function resetGame(){
+    time.classList.remove("gameOver");
     clearInterval(nInterval); 
     state = "zero";
     secondsLeft = 300
