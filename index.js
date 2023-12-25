@@ -63,11 +63,12 @@ function minSecond() {
     
 
 function startGame(){
-    state = "running";
+     if (state != "running") {
+        state = "running";
         if (secondsLeft > 0) {
           nInterval = setInterval(minSecond,1000);
         }
-    
+    }
 }
 
 function pauseGame(){
