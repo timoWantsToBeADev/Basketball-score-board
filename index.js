@@ -1,6 +1,6 @@
 let homeScore = 0;
 let awayScore = 0;
-let secondsLeft = 3;
+let secondsLeft = 300;
 let time = document.getElementById("time")
 let state = "zero";
 let nInterval;
