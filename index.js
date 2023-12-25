@@ -70,11 +70,11 @@ function minSecond() {
     
 
 function startGame(){
-    console.log(state)
-    if (state = "over" && state != "zero" && state != "paused"){
-            secondsLeft = 300; 
-            time.textContent = secondsLeft;
-    }
+//    console.log(state)
+//    if (state = "over" && state != "zero" && state != "paused"){
+//            secondsLeft = 300; 
+//            time.textContent = secondsLeft;
+//    }
      
      if (state != "running") {
             time.classList.remove("gameOver");
